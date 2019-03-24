@@ -8,9 +8,11 @@
                  [duct/module.web "0.7.0"]
                  [duct/module.ataraxy "0.3.0"]
                  [duct/module.sql "0.5.0"]
+                 [hiccup "1.0.5"]
                  [org.xerial/sqlite-jdbc "3.25.2"]]
   :plugins [[duct/lein-duct "0.11.2"]]
   :main ^:skip-aot film-ratings.main
+  :uberjar-name "film-ratings.jar"
   :resource-paths ["resources" "target/resources"]
   :prep-tasks     ["javac" "compile" ["run" ":duct/compiler"]]
   :middleware     [lein-duct.plugin/middleware]
